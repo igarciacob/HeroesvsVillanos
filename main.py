@@ -1,16 +1,12 @@
-# This is a sample Python script.
+from menu import menu
+import logging #registrar log
+from loggingconf import init_logging
+init_logging()
+logger = logging.getLogger(__name__)
 
-# Press Mayús+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    try:
+        menu()
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    except BaseException as e:
+        logger.error( f"Se ha producido un error de aplicacion {e}")

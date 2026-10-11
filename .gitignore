@@ -50,4 +50,4 @@ htmlcov/
 # Variables de entorno
 # =========================
 .env
-.env.*g
+.env.*
